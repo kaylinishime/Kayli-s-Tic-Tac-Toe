@@ -1,0 +1,41 @@
+body {
+  background-color: #99ceff;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  font-size: 65px;
+  margin-top: -5px;
+}
+
+#board {
+  height: 540px;
+  width: 540px;
+  background-color: #99ccff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -20px;
+}
+
+.box {
+  height:150px;
+  width: 150px;
+  background-color: white;
+  border-radius: 5px solid black;
+  float: right;
+  padding: 5px;
+  margin: 10px;
+  font-size: 140px;
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+}
+
+button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: 35px;
+  width: 80px;
+}
