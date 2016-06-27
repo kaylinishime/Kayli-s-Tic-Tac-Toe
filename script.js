@@ -1,9 +1,4 @@
 
-var board = [
-    [" "," "," "],
-            [" "," "," "],
-            [" "," "," "]
-          ];
 
 
 var player1 = "X";
@@ -11,8 +6,7 @@ var player2 = "O";
 var turn = 1;
 
 
-var button = document.querySelector("button");
-button.addEventListener("click", function(e) {
+var reset = function(){
     boxOne.textContent = "";
     boxTwo.textContent = "";
     boxThree.textContent = "";
@@ -22,7 +16,11 @@ button.addEventListener("click", function(e) {
     boxSeven.textContent = "";
     boxEight.textContent = "";
     boxNine.textContent = "";
-  });
+  };
+
+
+var button = document.querySelector("button");
+button.addEventListener("click", reset);
 
 
 var h2 = document.querySelector("h2");
@@ -180,3 +178,61 @@ var boxOne = document.getElementById("boxOne");
                       turn ++;
                     }
                   });
+
+
+//my long ass, tedious method I used to get the winner...
+
+
+var h1 = document.querySelector("h1");
+var board = document.getElementById("board");
+
+board.addEventListener("click", function() {
+  if (boxOne.innerHTML === player1 && boxTwo.innerHTML === player1 && boxThree.innerHTML === player1) {
+    h1.textContent = "Player X Wins!";
+      }
+  else if (boxOne.innerHTML === player2 && boxTwo.innerHTML === player2 && boxThree.innerHTML === player2) {
+  h1.textContent = "Player O Wins!";
+    }
+  else if (boxFour.innerHTML === player1 && boxFour.innerHTML === player1 && boxFour.innerHTML === player1){
+    h1.textContent = "Player X Wins!";
+  }
+  else if (boxFour.innerHTML === player2 && boxFour.innerHTML === player2 && boxFour.innerHTML === player2){
+      h1.textContent = "Player O Wins!";
+    }
+    else if (boxSeven.innerHTML === player1 && boxEight.innerHTML === player1 && boxNine.innerHTML === player1) {
+      h1.textContent = "Player X Wins!";
+    }
+    else if (boxSeven.innerHTML === player2 && boxEight.innerHTML === player2 && boxNine.innerHTML === player2) {
+          h1.textContent = "Player O Wins!";
+        }
+    else if (boxOne.innerHTML === player1 && boxFour.innerHTML === player1 && boxSeven.innerHTML === player1) {
+          h1.textContent = "Player X Wins!";
+        }
+    else if (boxOne.innerHTML === player2 && boxFour.innerHTML === player2 && boxSeven.innerHTML === player2) {
+        h1.textContent = "Player O Wins!";
+      }
+    else if (boxTwo.innerHTML === player1 && boxFive.innerHTML === player1 && boxEight.innerHTML === player1) {
+      h1.textContent = "Player X Wins!";
+    }
+    else if (boxTwo.innerHTML === player2 && boxFive.innerHTML === player2 && boxEight.innerHTML === player2) {
+      h1.textContent = "Player O Wins!";
+    }
+    else if (boxThree.innerHTML === player1 && boxSix.innerHTML === player1 && boxNine.innerHTML === player1) {
+      h1.textContent = "Player X Wins!";
+    }
+    else if (boxThree.innerHTML === player2 && boxSix.innerHTML === player2 && boxNine.innerHTML === player2) {
+      h1.textContent = "Player O Wins!";
+    }
+    else if (boxSeven.innerHTML === player1 && boxFive.innerHTML === player1 && boxThree.innerHTML === player1) {
+        h1.textContent = "Player X Wins!";
+      }
+    else if (boxSeven.innerHTML === player2 && boxFive.innerHTML === player2 && boxThree.innerHTML === player2) {
+          h1.textContent = "Player O Wins!";
+        }
+    else if (boxNine.innerHTML === player1 && boxFive.innerHTML === player1 && boxOne.innerHTML === player1) {
+            h1.textContent = "Player X Wins!";
+          }
+    else if (boxNine.innerHTML === player2 && boxFive.innerHTML === player2 && boxOne.innerHTML === player2) {
+        h1.textContent = "Player X Wins!";
+    }
+  });
