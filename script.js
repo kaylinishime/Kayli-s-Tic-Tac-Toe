@@ -5,6 +5,7 @@ var player1 = "X";
 var player2 = "O";
 var turn = 1;
 
+var h1 = document.querySelector("h1");
 
 var reset = function(){
     boxOne.textContent = "";
@@ -16,6 +17,7 @@ var reset = function(){
     boxSeven.textContent = "";
     boxEight.textContent = "";
     boxNine.textContent = "";
+    h1.textContent = "Tic Tac Toe";
   };
 
 
@@ -180,59 +182,81 @@ var boxOne = document.getElementById("boxOne");
                   });
 
 
-//my long ass, tedious method I used to get the winner...
+// //my long ass,
+// tedious method I
+// used to get the winner...
 
 
-var h1 = document.querySelector("h1");
+
 var board = document.getElementById("board");
 
 board.addEventListener("click", function() {
   if (boxOne.innerHTML === player1 && boxTwo.innerHTML === player1 && boxThree.innerHTML === player1) {
     h1.textContent = "Player X Wins!";
+    h2.textContent = "";
       }
   else if (boxOne.innerHTML === player2 && boxTwo.innerHTML === player2 && boxThree.innerHTML === player2) {
-  h1.textContent = "Player O Wins!";
+    h1.textContent = "Player O Wins!";
+    h2.textContent = "";
     }
-  else if (boxFour.innerHTML === player1 && boxFour.innerHTML === player1 && boxFour.innerHTML === player1){
+  else if (boxFour.innerHTML === player1 && boxFive.innerHTML === player1 && boxSix.innerHTML === player1) {
     h1.textContent = "Player X Wins!";
+    h2.textContent = "";
   }
-  else if (boxFour.innerHTML === player2 && boxFour.innerHTML === player2 && boxFour.innerHTML === player2){
+  else if (boxFour.innerHTML === player2 && boxFive.innerHTML === player2 && boxSix.innerHTML === player2){
       h1.textContent = "Player O Wins!";
+      h2.textContent = "";
     }
     else if (boxSeven.innerHTML === player1 && boxEight.innerHTML === player1 && boxNine.innerHTML === player1) {
       h1.textContent = "Player X Wins!";
+      h2.textContent = "";
     }
     else if (boxSeven.innerHTML === player2 && boxEight.innerHTML === player2 && boxNine.innerHTML === player2) {
           h1.textContent = "Player O Wins!";
+          h2.textContent = "";
         }
     else if (boxOne.innerHTML === player1 && boxFour.innerHTML === player1 && boxSeven.innerHTML === player1) {
           h1.textContent = "Player X Wins!";
+          h2.textContent = "";
         }
     else if (boxOne.innerHTML === player2 && boxFour.innerHTML === player2 && boxSeven.innerHTML === player2) {
         h1.textContent = "Player O Wins!";
+        h2.textContent = "";
       }
     else if (boxTwo.innerHTML === player1 && boxFive.innerHTML === player1 && boxEight.innerHTML === player1) {
       h1.textContent = "Player X Wins!";
+      h2.textContent = "";
     }
     else if (boxTwo.innerHTML === player2 && boxFive.innerHTML === player2 && boxEight.innerHTML === player2) {
       h1.textContent = "Player O Wins!";
+      h2.textContent = "";
     }
     else if (boxThree.innerHTML === player1 && boxSix.innerHTML === player1 && boxNine.innerHTML === player1) {
       h1.textContent = "Player X Wins!";
+      h2.textContent = "";
     }
     else if (boxThree.innerHTML === player2 && boxSix.innerHTML === player2 && boxNine.innerHTML === player2) {
       h1.textContent = "Player O Wins!";
+      h2.textContent = "";
     }
     else if (boxSeven.innerHTML === player1 && boxFive.innerHTML === player1 && boxThree.innerHTML === player1) {
         h1.textContent = "Player X Wins!";
+        h2.textContent = "";
       }
     else if (boxSeven.innerHTML === player2 && boxFive.innerHTML === player2 && boxThree.innerHTML === player2) {
           h1.textContent = "Player O Wins!";
+          h2.textContent = "";
         }
     else if (boxNine.innerHTML === player1 && boxFive.innerHTML === player1 && boxOne.innerHTML === player1) {
             h1.textContent = "Player X Wins!";
+            h2.textContent = "";
           }
     else if (boxNine.innerHTML === player2 && boxFive.innerHTML === player2 && boxOne.innerHTML === player2) {
-        h1.textContent = "Player X Wins!";
+        h1.textContent = "Player O Wins!";
+        h2.textContent = "";
     }
   });
+
+  // else if ((boxOne.innerHTML === player1||player2) && (boxTwo.innerHTML === player1||player2) && (boxThree.innerHTML === player1||player2) && (boxFour.innerHTML === player1||player2) && (boxFive.innerHTML === player1||player2) && (boxSix.innerHTML === player1||player2) && (boxSeven.innerHTML === player1||player2) && (boxEight.innerHTML === player1||player2) && (boxNine.innerHTML === player1||player2)) {
+  //   h1.textContent = "Tie!";
+  //   h2.textContent = "";
